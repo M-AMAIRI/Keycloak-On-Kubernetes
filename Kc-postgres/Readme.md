@@ -27,8 +27,12 @@ echo http://$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.in
 
 ## deploy and Test Postgres 
 
+```bash
+
+
 kubectl create -f Postgres.yaml
 
+```
 ### Test Postgres 
 
 ```bash
