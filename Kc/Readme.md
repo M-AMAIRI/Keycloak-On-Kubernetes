@@ -15,4 +15,4 @@ echo ""
 
 kubectl get service/exservice -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 
-echo http://$(kubectl get service/exservice -o jsonpath='{.status.loadBalancer.ingress[0].ip}'):8080
+echo http://$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}'):8080
