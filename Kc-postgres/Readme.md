@@ -11,7 +11,7 @@ KC_DB_USERNAME: keycloak
 
 KC_DB_PASSWORD: your-password
 
-sh'''
+```bash
 kubectl create -f keycloak.yaml
 
 wget -q -O - keycloak-ingress.yaml |
@@ -23,7 +23,7 @@ KEYCLOAK_URL=https://$(kubectl get service/keycloak -o jsonpath='{.status.loadBa
 kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 
 echo http://$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}'):8080
-'''
+```
 
 ## deploy and Test Postgres 
 
@@ -31,11 +31,11 @@ kubectl create -f Postgres.yaml
 
 ### Test Postgres 
 
-sh'''
+```bash
 
 kubectl exec -it podname --  psql -h localhost -U admin --password -p 5432 postgresdb
 
-'''
+```
 
 
 
