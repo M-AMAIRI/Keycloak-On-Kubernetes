@@ -30,7 +30,7 @@ echo http://$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.in
 ```bash
 
 
-kubectl create -f Postgres.yaml
+kubectl create -f postgres.yaml
 
 ```
 ### Test Postgres 
