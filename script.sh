@@ -19,7 +19,7 @@ helm install -n hotel keycloak-db bitnami/postgresql-ha --set postgresql.replica
 # deploy Keycloak cluster
 kubectl apply -n hotel -f kc.yaml
 # create HTTPS ingress for Keycloak
-kubectl apply -n hotel -f keycloak-ingress.yaml
+kubectl apply -n hotel -f ingress.yaml
 
 
 
