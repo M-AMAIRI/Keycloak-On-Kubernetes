@@ -7,7 +7,7 @@ kubectl create -f postgres.yaml
 
 ### Test Postgres 
 ```bash
-kubectl exec -it podname --  psql -h localhost -U admin --password -p 5432 postgresdb
+kubectl exec -it podname --  psql -h localhost -U keycloak --password -p 5432 postgres
 ```
 
 ## deploy Keycloak + Postgress Connection
