@@ -32,6 +32,13 @@ wget -q -O - keycloak-ingress.yaml |
 sed "s/KEYCLOAK_HOST/$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}')" |
 kubectl create -f -
 
+
+wget -q -O - https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/latest/kubernetes-examples/keycloak-ingress.yaml | \
+sed "s/KEYCLOAK_HOST/keycloak.$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}').nip.io/" | \
+kubectl create -f -
+
+
+
 KEYCLOAK_URL=https://$(kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}') && echo "" && echo "Keycloak: $KEYCLOAK_URL" && echo "Keycloak Admin Console: $KEYCLOAK_URL/admin" && echo "Keycloak Account Console: $KEYCLOAK_URL/realms/myrealm/account" && echo ""
 
 kubectl get service/keycloak -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
