@@ -1,0 +1,155 @@
+select ID , CLIENT_REALM_CONSTRAINT ,NAME , REALM_ID , REALM from KEYCLOAK_ROLE ;
+--- filter by master realm 
+
+
++--------------------------------------+--------------------------------------+---------------------------+--------------------------------------+-------+
+| ID                                   | CLIENT_REALM_CONSTRAINT              | NAME                      | REALM_ID                             | REALM |
++--------------------------------------+--------------------------------------+---------------------------+--------------------------------------+-------+
+| 03e0840f-53df-48fc-b6a2-de729d4649fc | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-authorization      | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 0535fd21-8047-4a1f-b702-3de398decf06 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | manage-consent            | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 055cf3b5-bd77-419f-a52c-6c35178492f2 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | query-clients             | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | default-roles-master      | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 1ca591fb-46b5-4baf-a6c1-454bc4256384 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-events               | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 26927a19-546b-4057-b6b6-2d4c4dc667be | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-users                | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 288e3264-4ba2-46cb-939e-562b7afc450e | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | manage-account-links      | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 29f59708-366d-485b-a13d-b5b604c184d1 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-realm              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 2c87d063-462f-4cd4-a617-4420e214868b | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | create-client             | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 2c90a15b-445b-4eeb-82e6-36a68543ede0 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | query-groups              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 36180118-a8ae-4136-b550-3d4753c2b8b0 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-identity-providers   | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | admin                     | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 3bb55f5a-f469-4ba5-a694-cd345881b08c | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | uma_authorization         | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 4c09b4c3-78c4-4c5c-bb01-98931f009d33 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | manage-account            | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 4dee8b80-56d4-4142-890f-1b14cced36e3 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | delete-account            | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 581fd60a-6d3b-490f-a34a-f74b18127f1d | bb2319f2-f3d3-4540-b0e2-bf289e59e7d9 | read-token                | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 5c3a6418-4ba5-4cbd-b5f7-04e75b0a0478 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | view-groups               | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 66eed128-4fec-4717-bb02-f942ac87b8a0 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | view-profile              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 69794b97-087b-47e3-a60d-acf685a09914 | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | view-consent              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 69b1a365-886c-40c4-b7b1-03df5a5ec615 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-identity-providers | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 7a4eb062-923c-48c1-9e4e-86c935d8863f | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-events             | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 8229c425-a07e-4627-a137-41995213cca5 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | create-realm              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 8b12889d-a14f-4c06-933d-4af9975150f3 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | impersonation             | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| a3b66a00-1fbd-41bf-b893-0902efc17613 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-clients            | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| b2acff15-57d2-4af9-bd8e-68202f8705e3 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-users              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| d4c5288e-02f5-4e4c-a8b5-0c623e8c156e | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | query-realms              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| d6175b81-1220-414c-af71-5f1138bfb17b | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-clients              | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| e0c9bde0-bbb9-4a1d-a4ce-578e2ef6840a | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | offline_access            | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| ef20712c-25ad-4ee2-8435-fc4b8d7b1e8f | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | query-users               | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| ef9d18da-23e0-44e1-83cd-bd2c7d5b42ef | 7db0d6c6-04bc-40c2-8333-ac26ec7edab3 | view-applications         | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| f96978cb-3e09-4970-a95f-8df7cc41adfd | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-realm                | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| fc066cde-99c9-4502-bc26-7837a73e8762 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | view-authorization        | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
++--------------------------------------+--------------------------------------+---------------------------+--------------------------------------+-------+
+
+
+mysql> select ID , CLIENT_REALM_CONSTRAINT ,NAME , REALM_ID , REALM from KEYCLOAK_ROLE where CLIENT_REALM_CONSTRAINT=REALM_ID
+    -> ;
++--------------------------------------+--------------------------------------+----------------------+--------------------------------------+-------+
+| ID                                   | CLIENT_REALM_CONSTRAINT              | NAME                 | REALM_ID                             | REALM |
++--------------------------------------+--------------------------------------+----------------------+--------------------------------------+-------+
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | default-roles-master | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | admin                | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 3bb55f5a-f469-4ba5-a694-cd345881b08c | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | uma_authorization    | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| 8229c425-a07e-4627-a137-41995213cca5 | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | create-realm         | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
+| e0c9bde0-bbb9-4a1d-a4ce-578e2ef6840a | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | offline_access       | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
++--------------------------------------+--------------------------------------+----------------------+--------------------------------------+-------+
+
+
+
+mysql> select * from COMPOSITE_ROLE;
++--------------------------------------+--------------------------------------+
+| COMPOSITE                            | CHILD_ROLE                           |
++--------------------------------------+--------------------------------------+
+| 0535fd21-8047-4a1f-b702-3de398decf06 | 69794b97-087b-47e3-a60d-acf685a09914 |
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | 3bb55f5a-f469-4ba5-a694-cd345881b08c |
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | 4c09b4c3-78c4-4c5c-bb01-98931f009d33 |
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | 66eed128-4fec-4717-bb02-f942ac87b8a0 |
+| 15bf12fb-bf25-420a-95e2-67b0a3af1959 | e0c9bde0-bbb9-4a1d-a4ce-578e2ef6840a |
+| 26927a19-546b-4057-b6b6-2d4c4dc667be | 2c90a15b-445b-4eeb-82e6-36a68543ede0 |
+| 26927a19-546b-4057-b6b6-2d4c4dc667be | ef20712c-25ad-4ee2-8435-fc4b8d7b1e8f |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 03e0840f-53df-48fc-b6a2-de729d4649fc |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 055cf3b5-bd77-419f-a52c-6c35178492f2 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 1ca591fb-46b5-4baf-a6c1-454bc4256384 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 26927a19-546b-4057-b6b6-2d4c4dc667be |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 29f59708-366d-485b-a13d-b5b604c184d1 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 2c87d063-462f-4cd4-a617-4420e214868b |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 2c90a15b-445b-4eeb-82e6-36a68543ede0 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 36180118-a8ae-4136-b550-3d4753c2b8b0 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 69b1a365-886c-40c4-b7b1-03df5a5ec615 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 7a4eb062-923c-48c1-9e4e-86c935d8863f |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 8229c425-a07e-4627-a137-41995213cca5 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 8b12889d-a14f-4c06-933d-4af9975150f3 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | a3b66a00-1fbd-41bf-b893-0902efc17613 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | b2acff15-57d2-4af9-bd8e-68202f8705e3 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | d4c5288e-02f5-4e4c-a8b5-0c623e8c156e |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | d6175b81-1220-414c-af71-5f1138bfb17b |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | ef20712c-25ad-4ee2-8435-fc4b8d7b1e8f |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | f96978cb-3e09-4970-a95f-8df7cc41adfd |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | fc066cde-99c9-4502-bc26-7837a73e8762 |
+| 4c09b4c3-78c4-4c5c-bb01-98931f009d33 | 288e3264-4ba2-46cb-939e-562b7afc450e |
+| d6175b81-1220-414c-af71-5f1138bfb17b | 055cf3b5-bd77-419f-a52c-6c35178492f2 |
++--------------------------------------+--------------------------------------+
+
+
+mysql> select * from COMPOSITE_ROLE where COMPOSITE='3ae7a93b-2df5-41f5-9447-aaf55f374455'  // select by if of the composite role admin 
+    -> ;
++--------------------------------------+--------------------------------------+
+| COMPOSITE                            | CHILD_ROLE                           |
++--------------------------------------+--------------------------------------+
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 03e0840f-53df-48fc-b6a2-de729d4649fc |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 055cf3b5-bd77-419f-a52c-6c35178492f2 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 1ca591fb-46b5-4baf-a6c1-454bc4256384 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 26927a19-546b-4057-b6b6-2d4c4dc667be |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 29f59708-366d-485b-a13d-b5b604c184d1 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 2c87d063-462f-4cd4-a617-4420e214868b |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 2c90a15b-445b-4eeb-82e6-36a68543ede0 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 36180118-a8ae-4136-b550-3d4753c2b8b0 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 69b1a365-886c-40c4-b7b1-03df5a5ec615 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 7a4eb062-923c-48c1-9e4e-86c935d8863f |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 8229c425-a07e-4627-a137-41995213cca5 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | 8b12889d-a14f-4c06-933d-4af9975150f3 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | a3b66a00-1fbd-41bf-b893-0902efc17613 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | b2acff15-57d2-4af9-bd8e-68202f8705e3 |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | d4c5288e-02f5-4e4c-a8b5-0c623e8c156e |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | d6175b81-1220-414c-af71-5f1138bfb17b |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | ef20712c-25ad-4ee2-8435-fc4b8d7b1e8f |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | f96978cb-3e09-4970-a95f-8df7cc41adfd |
+| 3ae7a93b-2df5-41f5-9447-aaf55f374455 | fc066cde-99c9-4502-bc26-7837a73e8762 |
++--------------------------------------+--------------------------------------+
+
+
+
+
+
+
+mysql> select ID , CLIENT_REALM_CONSTRAINT ,NAME , REALM_ID , REALM from KEYCLOAK_ROLE where NAME='manage-realm'
+    -> ;
++--------------------------------------+--------------------------------------+--------------+--------------------------------------+-------+
+| ID                                   | CLIENT_REALM_CONSTRAINT              | NAME         | REALM_ID                             | REALM |
++--------------------------------------+--------------------------------------+--------------+--------------------------------------+-------+
+| 29f59708-366d-485b-a13d-b5b604c184d1 | 4c3fecfd-ada0-408a-86a5-f7ba5cca527f | manage-realm | cc9add0d-0687-4db0-b3ae-24c51ccff9f8 | NULL  |
++--------------------------------------+--------------------------------------+--------------+--------------------------------------+-------+
+1 row in set (0.00 sec)
+
+mysql> select ID from KEYCLOAK_ROLE where NAME='manage-realm'
+    -> ;
++--------------------------------------+
+| ID                                   |
++--------------------------------------+
+| 29f59708-366d-485b-a13d-b5b604c184d1 |
++--------------------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
